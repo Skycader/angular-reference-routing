@@ -1,0 +1,19 @@
+<h1>Form</h1>
+
+<form [formGroup]="form" (ngSubmit)="submit">
+  <label>Email</label>
+  <input formControlName="email"/>
+
+  <button class='btn' type="submit" [disabled]="!form.valid">Submit</button>
+</form>
+
+<pre>{{form.valid}}</pre>
+
+<form [formGroup]="form2" (ngSubmit)="submit">
+  <label>Email</label>
+  <input formControlName="email"/>
+
+  <button class='btn' type="submit" [disabled]="!form2.valid">Submit</button>
+</form>
+
+<pre>{{form2.valid}}</pre>

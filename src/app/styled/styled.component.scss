@@ -1,0 +1,26 @@
+@import "config";
+
+$num: 5px;
+$col: #abc;
+.styled {
+  font-family: Rubik Bubbles;
+  @include both($border-form: dotted);
+  @include shadow(2px 3px 4px 5px black);
+  @include apply-p {
+    color: orange;
+  }
+  background: $color;
+
+  @media only screen and (max-width: 500px) {
+    color: yellow;
+  }
+
+  @include large-screen {
+    background: green;
+  }
+
+  @include small-screen {
+    background: crimson;
+    font-size: $num * 100;
+  }
+}

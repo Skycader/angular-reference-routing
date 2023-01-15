@@ -1,0 +1,29 @@
+@mixin border-rad($radius) {
+  border-radius: $radius;
+}
+
+@mixin border($width, $form, $color) {
+  border: $width $form $color;
+}
+
+@mixin shadow($shadow...) {
+  box-shadow: $shadow;
+}
+
+@mixin apply-p {
+  p {
+    @content;
+  }
+}
+
+@mixin large-screen() {
+  @media only screen and (max-width: 960px) {
+    @content;
+  }
+}
+
+@mixin small-screen() {
+  @media only screen and (max-width: 320px) {
+    @content;
+  }
+}

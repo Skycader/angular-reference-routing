@@ -1,0 +1,20 @@
+@import "mixins";
+@import "partials/fonts.scss";
+
+$color: red;
+
+@include load-google-font(Roboto);
+@import url(https://fonts.googleapis.com/css2?family=Rubik+Bubbles);
+
+@mixin font {
+  font: {
+    size: 40px;
+    weight: bold;
+  }
+}
+
+@mixin both($radius:25px, $border-width:2px, $border-form: solid, $border-color:green) {
+  @include font;
+  @include border-rad($radius);
+  @include border($border-width,$border-form,$border-color)
+}
