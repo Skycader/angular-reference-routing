@@ -13,7 +13,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { ErrorComponent } from './error/error.component';
 import { CounterComponent } from './counter/counter.component';
 import { FormComponent } from './form/form.component'
-import { PostingComponent } from './posting/posting.component'
+import { PostingComponent } from './posting/posting.component';
+import { RoutingComponent } from './routing/routing.component'
+import { RouterModule } from '@angular/router'
 
 @NgModule({
   declarations: [
@@ -27,13 +29,14 @@ import { PostingComponent } from './posting/posting.component'
     ErrorComponent,
     CounterComponent,
     FormComponent,
-    PostingComponent
+    PostingComponent,
+    RoutingComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
