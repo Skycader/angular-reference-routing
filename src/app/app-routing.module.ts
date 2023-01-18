@@ -18,7 +18,11 @@ const routes: Routes = [
   },
   { path: 'posts', component: PostsComponent, canActivate: [AuthGuard] },
   { path: 'post/:id', component: PostComponent },
-  { path: '**', component: ErrorComponent}
+  {
+    path: '404',
+    component: ErrorComponent,
+  },
+  // { path: '**', component: ErrorComponent}
 ];
 
 @NgModule({
