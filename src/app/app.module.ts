@@ -15,7 +15,8 @@ import { CounterComponent } from './counter/counter.component';
 import { FormComponent } from './form/form.component'
 import { PostingComponent } from './posting/posting.component';
 import { RoutingComponent } from './routing/routing.component'
-import { RouterModule } from '@angular/router'
+import { RouterModule } from '@angular/router';
+import { NavbarComponent } from './navbar/navbar.component'
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { RouterModule } from '@angular/router'
     CounterComponent,
     FormComponent,
     PostingComponent,
-    RoutingComponent
+    RoutingComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

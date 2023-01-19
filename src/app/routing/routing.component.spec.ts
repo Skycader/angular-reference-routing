@@ -1,4 +1,4 @@
-import { ModuleWithProviders } from '@angular/core';
+import { ModuleWithProviders, NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { ActivatedRoute, ExtraOptions, Params, Router, RouterModule, RouterOutlet, Routes } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -51,7 +51,8 @@ describe('RoutingComponent', () => {
         AppRoutingModule
         // RouterModule.forRoot(routes),
         // RouterTestingModule
-      ]
+      ],
+      schemas: [NO_ERRORS_SCHEMA]
     })
     
     fixture = TestBed.createComponent(RoutingComponent);
