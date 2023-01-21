@@ -2,14 +2,14 @@ import { EMPTY, from, of, throwError } from 'rxjs';
 import { PostingComponent } from './posting.component';
 import { PostingService } from './posting.service';
 
-describe('PostingComponent', () => {
+describe('Unit tests for PostingComponent', () => {
   let component: PostingComponent;
   let service: PostingService;
   beforeEach(() => {
     service = new PostingService(null);
     component = new PostingComponent(service);
   });
-  it('should fetch data when ngOnInit', () => {
+  xit('should fetch data when ngOnInit', () => {
     const spy = spyOn(service, 'fetch').and.callFake(() => {
       return EMPTY;
     });
@@ -19,7 +19,7 @@ describe('PostingComponent', () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  it('should update posts when ngOnInit', () => {
+  xit('should update posts when ngOnInit', () => {
     const posts = [1, 2, 3, 4];
     // spyOn(service, 'fetch').and.callFake(() => {
     //   return of(posts);

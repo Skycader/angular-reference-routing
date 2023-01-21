@@ -12,9 +12,12 @@ export class PostingComponent implements OnInit {
   constructor(private service: PostingService) {}
 
   ngOnInit(): void {
-    this.service.fetch().subscribe((p) => {
-      this.posts = p;
-    });
+    // this.service.fetch().subscribe((p) => {
+    //   this.posts = p;
+    // });
+    this.service.fetchPromise().then((p) => {
+      this.posts = p
+    })
   }
 
   add(title: string) {
