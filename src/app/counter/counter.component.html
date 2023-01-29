@@ -1,3 +1,13 @@
 <h1 class="counter" [class.green]="counter % 2 === 0">{{ counter }}</h1>
+<h2>{{random}}</h2>
 <button id="increment" class="btn btn-danger" (click)="increment()">+1</button>
-<button class="btn btn-danger" (click)="decrement()">-1</button>
+<button class="btn btn-danger" (click)="decrement()"> -1</button>
+<h2 appColor="orange" borderColor="green" [object]="{backgroundColor: 'cyan'}">Directive color</h2>
+<input/>
+<h3>Pipe test {{counter | mypipe:counter }}</h3>
+<button (click)="addToArray()">Add to array</button>
+<h4>Filter pipe test {{array | filter:counter}}</h4>
+<button (click)="showTemplate = !showTemplate">Toggle</button>
+<ng-template [ngIf]="showTemplate">
+  <h1>You can't see me</h1>
+</ng-template>

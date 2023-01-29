@@ -16,7 +16,11 @@ import { FormComponent } from './form/form.component'
 import { PostingComponent } from './posting/posting.component';
 import { RoutingComponent } from './routing/routing.component'
 import { RouterModule } from '@angular/router';
-import { NavbarComponent } from './navbar/navbar.component'
+import { NavbarComponent } from './navbar/navbar.component';
+import { StyleDirective } from './directives/style.directive';
+import { ColorDirective } from './directives/color.directive';
+import { MypipePipe } from './pipes/mypipe.pipe';
+import { FilterPipe } from './pipes/filter.pipe'
 
 @NgModule({
   declarations: [
@@ -32,7 +36,11 @@ import { NavbarComponent } from './navbar/navbar.component'
     FormComponent,
     PostingComponent,
     RoutingComponent,
-    NavbarComponent
+    NavbarComponent,
+    StyleDirective,
+    ColorDirective,
+    MypipePipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

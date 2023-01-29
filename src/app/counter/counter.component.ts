@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, EventEmitter, OnChanges, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-counter',
@@ -6,14 +6,38 @@ import { ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output } from
   styleUrls: ['./counter.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CounterComponent implements OnInit {
+export class CounterComponent implements OnInit, OnChanges, AfterViewInit {
 
+  showTemplate = true
   counter = 0
+  array = [1,2,3]
   @Output() eventer = new EventEmitter<number>()
   constructor() { }
 
   ngOnInit(): void {
+    console.log("init");
     
+  }
+
+  ngDoCheck() {
+    console.log("do check");
+    
+  }
+
+  ngOnChanges() {
+    console.log("counter change")
+  }
+
+  ngAfterViewInit() {
+    console.log("render")
+  }
+
+  get random() {
+  return Math.random()
+  }
+
+  addToArray() {
+    this.array.push(Math.random())
   }
 
   increment() {
